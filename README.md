@@ -2,6 +2,8 @@
 
 A NodeJS Typescript boilerplate to get started with quickly!
 
+Plan on iterating + making it more opinionated based on personal needs.
+
 ### Includes
 
 - babel config
