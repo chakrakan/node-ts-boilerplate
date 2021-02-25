@@ -16,8 +16,8 @@ Plan on iterating + making it more opinionated based on personal needs.
 - circleci pipeline to install deps, build, and run tests
 
 <details>
-<h4>Iterations</h4>
-<summary>
-🛠 v1.0 - This is a basic setup to help me make scripts that are going to run in production and/or will interface with production data
-</summary>
+  <summary>Iterations</summary>
+
+- **🛠 v1.0** - This is a basic setup to help me make scripts that are going to run in production and/or will interface with production data
+
 </details>
