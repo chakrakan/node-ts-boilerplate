@@ -3,6 +3,7 @@
   "description": "NodeJS & TypeScript boilerplate to get quickly started",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/chakrakan/node-ts-boilerplate.git",
   "author": "Kanisk Chakraborty <57884127+chakrakan@users.noreply.github.com>",
@@ -11,18 +12,32 @@
     "clean": "rimraf dist/*",
     "build": "tsc",
     "dev": "yarn build --watch --preserveWatchOutput",
+    "start": "tsc && node --require 'dotenv/config' dist/src/index.js",
     "format": "prettier --write 'src/**/*.{js,ts,json}'",
     "lint": "eslint src --ext js,ts",
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.1",
     "@babel/preset-env": "7.13.5",
     "@babel/preset-typescript": "7.13.0",
     "@types/jest": "26.0.20",
     "@typescript-eslint/eslint-plugin": "4.15.2",
     "@typescript-eslint/parser": "4.15.2",
     "eslint": "7.20.0",
+    "husky": "^5.1.1",
     "jest": "26.6.3",
-    "typescript": "4.2.2"
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0",
+    "rimraf": "^3.0.2",
+    "typescript": "4.1.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

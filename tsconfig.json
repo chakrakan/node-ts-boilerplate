@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "incremental": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "composite": true,
@@ -14,7 +15,7 @@
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "rootDir": ".",
     "pretty": true,
     "sourceMap": true,

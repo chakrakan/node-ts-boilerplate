@@ -1,0 +1,34 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.1
+commands:
+  install_deps:
+    steps:
+      - checkout
+      - run:
+          name: Install deps
+          command: yarn install
+
+jobs:
+  lint-check:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - install_deps
+      - run:
+          name: lint
+          command: yarn lint
+  unit-tests:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - install_deps
+      - run:
+          name: Run tests
+          command: yarn test
+
+workflows:
+  node-tests:
+    jobs:
+      - lint-check
+      - unit-tests
